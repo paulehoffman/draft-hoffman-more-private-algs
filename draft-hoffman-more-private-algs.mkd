@@ -1,0 +1,84 @@
+---
+title: More Private Algorithms  for DNSSEC
+abbrev: More Private Algs
+docname: draft-hoffman-more-private-algs-00
+
+stand_alone: true
+v: 3
+updates: 4034
+
+ipr: trust200902
+kw: Internet-Draft
+cat: std
+consensus: true
+submissionType: IETF
+
+pi:
+  toc: yes
+  tocdepth: 4
+  sortrefs: yes
+  symrefs: yes
+
+author:
+ -
+   ins: P. Hoffman
+   name: Paul Hoffman
+   org: ICANN
+   email: paul.hoffman@icann.org
+
+normative:
+  RFC4034:
+
+informative:
+
+--- abstract
+
+RFC 4034 allocates one value in the IANA registry for DNSSEC algorithm numbers for
+private algorithms.
+That may be too few for experimentation where multiple yet-to-be-assigned algorithms
+are used.
+This document assigns seven more values for this use case.
+
+This document is currently maintained at https://github.com/paulehoffman/draft-hoffman-more-private-algs.
+Issues and pull requests are welcomed.
+If the document is later adopted by a working group, a new repository will likely
+be created.
+
+--- middle
+
+# Introduction
+
+Section A.1 of {{RFC4034}} assigns value 253 as "Private \[PRIVATEDNS\]".
+Section A.1.1 describes this value:
+
+~~~
+Algorithm number 253 is reserved for private use and will never be
+assigned to a specific algorithm.  The public key area in the DNSKEY
+RR and the signature area in the RRSIG RR begin with a wire encoded
+domain name, which MUST NOT be compressed.  The domain name indicates
+the private algorithm to use, and the remainder of the public key
+area is determined by that algorithm.  Entities should only use
+domain names they control to designate their private algorithms.
+~~~
+
+In the coming years, it is likely that there will be experimentation with new DNSSEC signing
+algorithms for post-quantum cryptography.
+At the time this document is written, it is possible that there will be many such
+algorithms in experimental use at the same time.
+If that comes to pass, it would be useful to have a handful of private use algorithms
+to use at the same time, such as for experimenting with zones that will have multiple
+simultaneous signing algorithms.
+
+This document updates {{RFC4034}} to add seven more private use algorithms that have
+exactly the same properties as algorithm 253, bringing the total number of
+private use algorithms that use the same format to eight.
+
+# IANA Considerations
+
+This document requests that IANA allocate seven additional values in the "DNS Security Algorithm Numbers" registry.
+
+# Security Considerations
+
+Allocating private use values does not cause any significant security considerations.
+
+--- back
