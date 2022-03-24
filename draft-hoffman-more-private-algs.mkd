@@ -1,7 +1,7 @@
 ---
 title: More Private Algorithms  for DNSSEC
 abbrev: More Private Algs
-docname: draft-hoffman-more-private-algs-00
+docname: draft-hoffman-more-private-algs-01
 
 stand_alone: true
 v: 3
