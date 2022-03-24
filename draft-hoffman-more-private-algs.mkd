@@ -69,8 +69,12 @@ If that comes to pass, it would be useful to have a handful of private use algor
 to use at the same time, such as for experimenting with zones that will have multiple
 simultaneous signing algorithms.
 
-This document updates {{RFC4034}} to add seven more private use algorithms that have
-exactly the same properties as algorithm 253, bringing the total number of
+This document updates {{RFC4034}} to add seven more private use algorithms.
+Unlike private use algorithm 253, there is no restriction on the public key area in the DNSKEY
+RR and the signature area in the RRSIG RR.
+Thus, there are no domain names embdded in the public key or signature like there are
+with private use algorithm 253.
+This update brings the total number of
 private use algorithms that use the same format to eight.
 
 # IANA Considerations
