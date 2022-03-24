@@ -79,7 +79,10 @@ private use algorithms that use the same format to eight.
 
 # IANA Considerations
 
-This document requests that IANA allocate seven additional values in the "DNS Security Algorithm Numbers" registry.
+This document requests that IANA allocate seven additional values,
+245 through 251,
+in the "DNS Security Algorithm Numbers"
+registry (https://www.iana.org/assignments/dns-sec-alg-numbers/).
 
 # Security Considerations
 
